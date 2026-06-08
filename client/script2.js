@@ -1264,7 +1264,7 @@ BonziCOINS Menu `,`
        return canvas;
      }
     function setup(logindata){
-        var aud = new Audio("./login.mp3");
+        var aud = new Audio("./sfx/logon/Windows 114.wav");
         if(firstInst)aud.play();
         setTimeout(() => {firstInst = false;},1100);
         if(!location.href.includes("mini.html")){
