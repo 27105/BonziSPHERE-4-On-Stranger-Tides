@@ -1596,6 +1596,8 @@ BonziCOINS Menu `,`
         })
         $("error_page").style.display = "block";
         $(error_id).style.display = "block"//;leaderboardUpdate();
+        let audio = new Audio('./Try Again Rating - Rhythm Heaven Megamix.mp3');
+        audio.play();
     })
     socket.on("rawdata", (d)=>{alert(d)})
   
