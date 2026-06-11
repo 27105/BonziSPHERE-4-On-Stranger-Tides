@@ -86,6 +86,11 @@
 			{"type": 1, "anim": "shrug_back"},
 			{"type": 0, "text": "Sorry. I just had an epiphany of my own sad, sad existence."},
 			{"type": 1, "anim": "shrug_back"}
+		],
+		[
+		    {"type": 0, "text": "Why are the **cow**s unhappy?"},
+			{"type": 0, "text": "Because they are not in a great moo'd!"},
+			{"type": 1, "anim": "shrug_back"}
 		]
 	],
 	"end": [
