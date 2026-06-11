@@ -524,7 +524,7 @@ span .bubble_text{
 
 
 /*ERRORS*/
-/* #error_page{
+#error_page{
     position: fixed;
     top: 0;
     left: 0;
@@ -548,33 +548,6 @@ span .bubble_text{
     width: 100%;
     max-width: 600px;
     max-height: 100%;
-} */
-
-#error_page {
-    /* Classic Windows XP BSOD Blue */
-    background-color: #0000AA; 
-    
-    /* Fullscreen setup */
-    width: 100vw;
-    height: 100vh;
-    margin: 0;
-    padding: 10% 15%;
-    box-sizing: border-box;
-    overflow: hidden;
-    
-    /* Typography */
-    color: #FFFFFF;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 20px;
-    font-weight: bold;
-    line-height: 1.5;
-}
-
-/* Highlight the main error title */
-#error_page .title {
-    background-color: #FFFFFF;
-    color: #0000AA;
-    padding: 0 10px;
 }
 
 
