@@ -366,36 +366,84 @@
         <!--This includes ALL error types-->
         <div id="error_page" style="display: none;">
             <div class="error_message" id="error_disconnect" style="display:none;">
-                <img src="./img/error_disconnect.png"><br>
-                <h1>BIAWORLD.HTML has encountered an error and needs to close.</h1>
-                Nah, but seriously there was an error and you got disconnected from the server. Chances are, your internet just died out for a brief moment or your device went to sleep. Otherwise the server just screwed up.<br><br>
-                You will automatically reconnect. If that doesn't work try to Reload<br><br>
-                <a href="/">Reload?</a><br><br>
+                <span class="title">A problem has been detected and BonziSPHERE 4: On Stranger Tides has been shut down to prevent damage to the website.</span>
+                <br><br>
+                The problem seems to be caused by the following script: socket.disconnect();
+                <br><br>
+                USER_DISCONNECTED
+                <br><br>
+                Nah, but seriously there was an error and you got disconnected from the server. Chances are, your internet just died out for a brief moment or your device went to sleep. Otherwise the server just screwed up.
+                <br><br>
+                You will automatically reconnect. If that doesn't work try to <a href="/">Reload</a>
+                <br><br>
+                If problems continue, clear the cache using Ctrl+Shift+R.
+                <br><br>
+                Technical information:
+                <br><br>
+                *** STOP: 0x00000050 (0xFD30BF98, 0x00000001, 0xFBFE7617, 0x00000000)
+                <br><br>
+                ***  socket.disconnect(); - a script that obviously crashes you
+                <br><br>
                 Room ID - <span id="error_room">NONE</span>
             </div>
             <div class="error_message" id="error_restart" style="display:none;">
-                <img src="./img/error_disconnect.png"><br>
-                <h1>BonziWORLD.exe is restaring</h1>
-                Fune has restarted BonziWORLD.org. Please wait patiently. It is possible that this is due to a new update on BonziWORLD.org<br><br>
-                You will automatically reconnect. If that doesn't work try to Reload<br><br>
-                <a href="/">Reload?</a><br><br>
+                <span class="title">A problem has been detected and BonziSPHERE 4: On Stranger Tides has been shut down to prevent damage to the website.</span>
+                <br><br>
+                The problem seems to be caused by the following action: Restarting
+                <br><br>
+                SERVER_RESTARTED
+                <br><br>
+                RPS has restarted BonziSPHERE 4. Please wait patiently. It is possible that this is due to a new update on BonziSPHERE 4 or that someone fucked the site with XSS.
+                <br><br>
+                You will automatically reconnect. If that doesn't work try to <a href="/">Reload</a>
+                <br><br>
+                If problems continue, clear the cache using Ctrl+Shift+R.
+                <br><br>
+                Technical information:
+                <br><br>
+                *** STOP: 0x00000050 (0xFD30BF98, 0x00000001, 0xFBFE7617, 0x00000000)
+                <br><br>
                 Room ID - <span id="error_room">NONE</span>
             </div>
             <div class="error_message" id="error_kick" style="display:none;">
-                <img src="./img/error_disconnect.png"><br>
-                <h1>You have been kicked.</h1>
-                You may have been kicked by a moderator, or if it was a private room, the room owner.<br><br>
-                <a href="/">Reload?</a><br><br>
-                Kicked by - <span id="error_kicker">???</span><br><br>
+                <span class="title">A problem has been detected and BonziSPHERE 4: On Stranger Tides has been shut down to prevent damage to the website.</span>
+                <br><br>
+                The problem seems to be caused by the following action: Kicking
+                <br><br>
+                USER_KICKED
+                <br><br>
+                You may have been kicked by a king or a pope. It can't be the room owner because that's impossible.
+                <br><br>
+                <a href="/">Reload</a>
+                <br><br>
+                Technical information:
+                <br><br>
+                *** STOP: 0x00000050 (0xFD30BF98, 0x00000001, 0xFBFE7617, 0x00000000)
+                <br><br>
+                Kicked by - <span id="error_kicker">???</span>
+                <br><br>
                 Room ID - <span id="error_room">NONE</span>
             </div>
             <div class="error_message" id="error_ban" style="display:none;">
-                <img src="./img/error_disconnect.png"><br>
-                <h1>You have been banned.</h1>
-                <a href="/">Reload?</a><br><br>
-                Banned by - <span id="banned_by">???</span><br><br>
-                Reason - <span id="ban_reason">???</span><br><br>
-                Your IP - <span id="own_ip">???</span><br><br>
+                <span class="title">A problem has been detected and BonziSPHERE 4: On Stranger Tides has been shut down to prevent damage to the website.</span>
+                <br><br>
+                The problem seems to be caused by the following action: Banning
+                <br><br>
+                USER_BANNED
+                <br><br>
+                Banned by - <span id="banned_by">???</span>
+                <br><br>
+                Reason - <span id="ban_reason">???</span>
+                <br><br>
+                Your IP - <span id="own_ip">???</span>
+                <br><br>
+                Technical information:
+                <br><br>
+                *** STOP: 0x00000050 (0xFD30BF98, 0x00000001, 0xFBFE7617, 0x00000000)
+                <br><br>
+                ***  If you accidentally got banned, please contact me on Discord. Username: megahappies
+                <br><br>
+                Room ID - <span id="error_room">NONE</span>
             </div>
         </div>
     
