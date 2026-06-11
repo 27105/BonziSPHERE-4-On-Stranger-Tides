@@ -60,6 +60,8 @@ module.exports.vpnLocked = false;
 const whitelist = [
 	"https://files.catbox.moe",
 	"https://i.ibb.co",
+	"https://i.imgur.com",
+	"https://wiki.bonziworld.eu",
 ];
 module.exports.whitelist = whitelist;
 setInterval(()=>{module.exports.bancount = 0}, 60000*5)
@@ -421,7 +423,7 @@ module.exports.commands = {
     let reason = param.substring(param.indexOf(" ")+1, param.length);
     param = param.substring(0, param.indexOf(" "));
     if(reason.replace(/ /g, '') == ''){
-      user.socket.emit("window", {title: "BAN FAILED", html: "MUST SPECIFY BAN REASON"});
+      user.socket.emit("window", {title: "Error", html: "Reason is required."});
       return;
     }
 
