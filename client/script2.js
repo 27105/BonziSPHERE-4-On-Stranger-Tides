@@ -1108,7 +1108,7 @@ BonziCOINS Menu `,`
     socket.on("coins",data=>{
         
         lastcoin = coins;
-        if(typeof data =="number"){coins=data;let coine = new Audio('coin.mp3');if(coins-lastcoin > 3)coine.play();}
+        if(typeof data =="number"){coins=data;let coine = new Audio('./img/agents/CamelScreech.wav');if(coins-lastcoin > 3)coine.play();}
        
         if(typeof data=="object"){
             agents[data.guid].pub.coins = data.amt;
