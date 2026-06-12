@@ -1457,11 +1457,19 @@ BonziCOINS Menu `,`
   
     function start(){
         
-        socket.emit("login", {
-            name: $("nickname").value,
-            room: $("room").value,
-            color: settings.color
-        })
+        if (settings.color.startsWith("https://")) {
+            socket.emit("login", {
+                name: $("nickname").value,
+                room: $("room").value,
+                color: colors[Math.floor(Math.random() * colors.length)]
+            });
+        } else {
+            socket.emit("login", {
+                name: $("nickname").value,
+                room: $("room").value,
+                color: settings.color
+            });
+        }
         settings.name = $("nickname").value.replace(/ /g, "") == "" ? "Anonymous" : $("nickname").value;
         document.cookie = compileCookie(settings);
         $("login_card").style.display = "none";
