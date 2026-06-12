@@ -1753,7 +1753,71 @@ BonziCOINS Menu `,`
         return x;
     }
   
-  
+    function explodeBonzi(guid) {
+        const target = document.getElementById(`${guid}p`);
+        if (!target) return console.error('Bonzi element not found!');
+
+        // 1. Kick / Fling Animation
+        const flingKeyframes = [
+            { transform: 'translate(0, 0) rotate(0deg) scale(1)', opacity: 1 },
+            { transform: 'translate(300px, -250px) rotate(720deg) scale(0.5)', opacity: 0.2 },
+            { transform: 'translate(400px, 300px) rotate(1080deg) scale(0)', opacity: 0 }
+        ];
+
+        const flingTiming = {
+            duration: 800,
+            easing: 'cubic-bezier(0.55, 0.085, 0.68, 0.53)',
+            fill: 'forwards'
+        };
+
+        target.animate(flingKeyframes, flingTiming);
+
+        // 2. Explosion Effect
+        const rect = target.getBoundingClientRect();
+        const explosion = document.createElement('div');
+        
+        // Base explosion styles
+        explosion.style.position = 'fixed';
+        explosion.style.left = `${rect.left + (rect.width / 2) - 50}px`;
+        explosion.style.top = `${rect.top + (rect.height / 2) - 50}px`;
+        explosion.style.width = '100px';
+        explosion.style.height = '100px';
+        explosion.style.borderRadius = '50%';
+        explosion.style.background = 'radial-gradient(circle, #ffcc00, #ff3300, #ff0000, transparent)';
+        explosion.style.boxShadow = '0 0 40px #ffcc00, 0 0 80px #ff3300';
+        explosion.style.pointerEvents = 'none';
+        explosion.style.zIndex = '9999';
+
+        document.body.appendChild(explosion);
+
+        // 3. Explosion Expansion & Fade Out
+        const boomKeyframes = [
+            { transform: 'scale(0)', opacity: 1 },
+            { transform: 'scale(3.5)', opacity: 0.6 },
+            { transform: 'scale(5)', opacity: 0 }
+        ];
+
+        const boomTiming = {
+            duration: 600,
+            easing: 'ease-out',
+            fill: 'forwards'
+        };
+
+        const explosionAnimation = explosion.animate(boomKeyframes, boomTiming);
+
+        // 4. Cleanup
+        Promise.all([
+            target.animate(flingKeyframes, flingTiming).finished,
+            explosionAnimation.finished
+        ]).then(() => {
+            target.remove();
+            explosion.remove();
+        });
+        let audio = new Audio('./CamelScreech.mp3');
+        audio.play();
+    }
+
+
     //SET THEME
     if(settings.theme != undefined) {
        $("theme").href = settings.theme;

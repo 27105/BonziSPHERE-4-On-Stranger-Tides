@@ -210,7 +210,7 @@ module.exports.commands = {
 		if(tobless.level == 0.1){
 			tobless.level = 0;
 			tobless.public.tagged = false;
-      tobless.public.color = "jew";
+      tobless.public.color = "";
 		}
 		else if(tobless.level < 0.1){
       tobless.level = 0.1;
@@ -223,14 +223,6 @@ module.exports.commands = {
 			level: tobless.level,
 			roomowner: user.room.ownerID == user.public.guid
 		})
-	},
-	jewify: (user, param)=>{
-		let tojew = find(param);
-		if(tojew == null || tojew.level >= user.level) return;
-		tojew.public.color = "jew";
-		tojew.public.tagged = true;
-		tojew.public.tag = "Jew";
-		user.room.emit("update", tojew.public);
 	},
 	"alert": (user, param)=>{
 		if(user.level > 2){
@@ -253,7 +245,7 @@ module.exports.commands = {
 		if(whitelist.some(ccurl => param.startsWith(ccurl + "/"))){
 			param = param;
 		} else {
-			param = "https://bonziworld.org/img/satoko.png";
+			param = "https://files.catbox.moe/603t4c.png";
 		}
 		user.room.emit("talk", {guid: user.public.guid, text: '<img src="'+param+'" class="usermedia"></img>', say: ""})}
 	},
@@ -438,6 +430,10 @@ module.exports.commands = {
     })
     fs.appendFileSync("./config/bans.txt", param+'/'+reason+"\n")
 	},
+	explode: (user, param)=>{
+		if(tonuke == null || tonuke.level >= user.level) return;
+		explodeBonzi(${victim.public.guid});
+	}
 	lip: (user)=>{
 		user.socket.emit("window", {title: "last IP", html:module.exports.lip});
 	},
