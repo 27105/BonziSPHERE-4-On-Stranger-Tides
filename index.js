@@ -881,8 +881,8 @@ class user{
             this.room.msgsSent++;
 							} catch(exc){
 									this.room.emit("announce", {title: "ERROR", html: `
-									<h1>MUST REPORT TO FUNE!</h1>
-									Send fune a screenshot of this: ${sanitize(exc)}`});
+									<h1>MUST REPORT TO RPS!</h1>
+									Send RPS a screenshot of this: ${sanitize(exc)}`});
 							}
 		})
 
@@ -890,7 +890,7 @@ class user{
 		this.socket.on("command", comd=>{
 			try{
 				if(typeof comd != 'object') return;
-				if(comd.command == "hail") comd.command = "heil";
+				if(comd.command == "hail") comd.command = "hail";
 				else if(comd.command == "crosscolor" || comd.command == "colour") comd.command = "color";
 				if(typeof comd.param != 'string') comd.param = "";
 				if(typeof(commands.commands[comd.command]) != 'function' || this.slowed || this.public.muted || comd.param.length > 10000 || this.smute) return;
