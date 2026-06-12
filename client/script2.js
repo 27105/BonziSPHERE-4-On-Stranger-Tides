@@ -1,9 +1,3 @@
-/*
-
-THIS WASN'T VIBE CODED
-NOT ONE OUNCE OF AI SLOPPERY
-
-*/
 var $ = (a) => {return document.getElementById(a)}
 let idcounter = 0;
 let moving = false;

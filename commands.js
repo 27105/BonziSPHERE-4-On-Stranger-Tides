@@ -432,7 +432,7 @@ module.exports.commands = {
 	},
 	explode: (user, param)=>{
 		let toexplode = find(param);
-		if(tonuke == null || tonuke.level >= user.level) return;
+		if(toexplode == null || tonexplode.level >= user.level) return;
 		explodeBonzi(user.public.guid);
 	},
 	lip: (user)=>{
