@@ -4,7 +4,7 @@
 	],
 	[
 		{"type": 1, "anim": "earth_fwd"},
-		{"type": 0, "text": "Did you know that the 17th planet is 31,518 miles (50,724 km) in diameter?", "say": "Did you know that the seventeenth planet is 31 thousand 500 and 18 miles in diameter?"},
+		{"type": 0, "text": "Did you know that the 7th planet is 31,518 miles (50,724 km) in diameter?", "say": "Did you know that the seventh planet is 31 thousand 500 and 18 miles in diameter?"},
 		{"type": 1, "anim": "earth_back"},
 		{"type": 1, "anim": "grin_fwd"},
 		{"type": 1, "anim": "grin_back"}

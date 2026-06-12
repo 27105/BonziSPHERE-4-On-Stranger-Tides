@@ -70,8 +70,8 @@
 			{"type": 1, "anim": "shrug_back"}
 		],
 		[
-			{"type": 0, "text": "What is a <b>cow</b> that eats grass?"},
-			{"type": 0, "text": "You. Because you're a <b>cow</b> that eats grass."},
+			{"type": 0, "text": "What is a <b>cow</b> that eats grass?", "say": "What is a cow that eats grass?"},
+			{"type": 0, "text": "You. Because you're a <b>cow</b> that eats grass.", "say": "You. Because you're a cow that eats grass."},
 			{"type": 0, "text": "I'm a comedic genius, I know."},
 			{"type": 1, "anim": "shrug_back"}
 		],
@@ -83,7 +83,7 @@
 			{"type": 1, "anim": "shrug_back"}
 		],
 		[
-		    {"type": 0, "text": "Why are the <b>cow</b>s unhappy?"},
+		    {"type": 0, "text": "Why are the <b>cow</b>s unhappy?", "say": "Why are the cows unhappy?"},
 			{"type": 0, "text": "Because they are not in a great moo'd!"},
 			{"type": 1, "anim": "shrug_back"}
 		]

@@ -493,7 +493,7 @@ BonziCOINS Menu `,`
     },
     "applets_browser": () => {
         new msWindow(`Internet Browser`,`
-             <iframe src="https://soyjak.st" width="600" height="450" id="browser"></iframe>
+             <iframe src="https://mickai.me" width="600" height="450" id="browser"></iframe>
             <div style="display:flex;height:50px;width:600px;flex-direction:row;">
                 <input type="text" id="browser_url" placeholder="any HTTPS site here... (some do not work)" style="width:75%"></input>
                  <button class="msBtn"class="msBtn" onclick="$('browser').src = $('browser_url').value;" style="width:25%;">Go</button>

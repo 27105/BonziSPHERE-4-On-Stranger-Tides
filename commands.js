@@ -183,7 +183,7 @@ module.exports.commands = {
   pope: (user, param)=>{
 		user.public.color = "pope";
 		user.public.tagged = true;
-		user.public.tag = "Owner";
+		user.public.tag = "The Incomprehensible Smoker";
 		user.room.emit("update", user.public);
 	},
   vpnlock: (user, param)=>{
