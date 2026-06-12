@@ -431,9 +431,10 @@ module.exports.commands = {
     fs.appendFileSync("./config/bans.txt", param+'/'+reason+"\n")
 	},
 	explode: (user, param)=>{
+		let toexplode = find(param);
 		if(tonuke == null || tonuke.level >= user.level) return;
 		explodeBonzi(${victim.public.guid});
-	}
+	},
 	lip: (user)=>{
 		user.socket.emit("window", {title: "last IP", html:module.exports.lip});
 	},
