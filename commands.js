@@ -58,10 +58,12 @@ module.exports.bans = [];
 module.exports.reasons = [];
 module.exports.vpnLocked = false;
 const whitelist = [
-	"https://files.catbox.moe",
+	"https://i.imgflip.com",
 	"https://i.ibb.co",
 	"https://i.imgur.com",
 	"https://wiki.bonziworld.eu",
+	"https://cdn.discordapp.com",
+	"https://file.garden",
 ];
 module.exports.whitelist = whitelist;
 setInterval(()=>{module.exports.bancount = 0}, 60000*5)
@@ -74,7 +76,7 @@ module.exports.commands = {
 			if(module.exports.ccblacklist.includes(user.public.color) || module.exports.ccblacklist.includes(param)) user.public.color = "jew";
 			
 			if(whitelist.some(ccurl => param.startsWith(ccurl + "/"))){
-				user.public.color = param;
+				user.public.color = colors[Math.floor(Math.random() * colors.length)]; // user.public.color = param;
 			} else {
 				user.public.color = colors[Math.floor(Math.random() * colors.length)];
 			}
