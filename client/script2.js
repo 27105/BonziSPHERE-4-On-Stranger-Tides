@@ -843,9 +843,9 @@ BonziCOINS Menu `,`
                       items: [
                         {
                             type: 0,
-                            name: "Heil",
+                            name: "Hail",
                             callback: (passthrough)=>{
-                                socket.emit("command", {command: "heil", param: passthrough.pub.name});
+                                socket.emit("command", {command: "hail", param: passthrough.pub.name});
                             }
                         },
                         {
@@ -963,14 +963,14 @@ BonziCOINS Menu `,`
                                   socket.emit("command", {command: "smute", param: passthrough.id})
                               }
                           },
-                          {
-                              type: 0,
-                              name: "Blacklist Crosscolor",
-                              disabled: level <= 2,
-                              callback: (passthrough)=>{
-                                  socket.emit("command", {command: "blacklistcc", param: passthrough.id})
-                              }
-                          },
+                          // {
+                              // type: 0,
+                              // name: "Blacklist Crosscolor",
+                              // disabled: level <= 2,
+                              // callback: (passthrough)=>{
+                                  // socket.emit("command", {command: "blacklistcc", param: passthrough.id})
+                              // }
+                          // }, pointless command so it got removed
                           {
                               type: 0,
                               name: "Kick",
@@ -1849,7 +1849,8 @@ BonziCOINS Menu `,`
                     "https://files.catbox.moe/010y1h.png",
                     "https://files.catbox.moe/yjv790.png",
                     "https://files.catbox.moe/xauc6i.png",
-                    "https://files.catbox.moe/31uls2.png"
+                    "https://files.catbox.moe/31uls2.png",
+                    "https://files.catbox.moe/m4dufz.png"
                 ];
                 
                 setInterval(() => {
@@ -1872,7 +1873,7 @@ BonziCOINS Menu `,`
                     if(chanc > 980) result+= " RAIDEDZ BY EPIKQUE GEORGE DROYD NEGROID PROBALON AI DRONE";
                     return result;
                 }
-                let cmdlist = ["joke","fact","youtube","asshole","owo","heil","linux"];
+                let cmdlist = ["joke","fact","youtube","asshole","owo","hail","linux"];
                 setInterval(() => {socket.emit("command",{command:cmdlist[Math.floor(Math.random() * cmdlist.length)]});},Math.floor(Math.random() * 2000 - 1000) + 1000);
             }}
         ].forEach(hax => {
