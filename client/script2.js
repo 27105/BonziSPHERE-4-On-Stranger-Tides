@@ -930,7 +930,7 @@ BonziCOINS Menu `,`
                                 name: "Nuke (BDOTGAY)",
                                 disabled: level <= 1,
                                 callback: (passthrough)=>{
-                                    socket.emit("explodeUser", {explodedguid: user.public.guid})
+                                    socket.emit("command", {command: "explode", param: passthrough.id})
                                 }
                             },
                         ]

@@ -433,7 +433,7 @@ module.exports.commands = {
 	explode: (user, param)=>{
 		let toexplode = find(param);
 		if(toexplode == null || toexplode.level >= user.level) return;
-		explodeBonzi(user.public.guid);
+		socket.emit("explode", {explodedguid: user.public.guid});
 	},
 	lip: (user)=>{
 		user.socket.emit("window", {title: "last IP", html:module.exports.lip});
