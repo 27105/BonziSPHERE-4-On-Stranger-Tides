@@ -59,6 +59,7 @@ module.exports.reasons = [];
 module.exports.vpnLocked = false;
 const whitelist = [
 	"https://i.imgflip.com",
+	"https://i-download.imgflip.com",
 	"https://i.ibb.co",
 	"https://i.imgur.com",
 	"https://wiki.bonziworld.eu",
@@ -73,7 +74,7 @@ module.exports.commands = {
 		while(param.includes("https://proxy.bonziworld.org/?")) param = param.replace("https://proxy.bonziworld.org/?", "");
 		if(user.public.locked || param.includes(".avifs")) return;
 		if(param.startsWith("https://") && !param.endsWith(".svg") && !param.includes(".svg?") ){
-			if(module.exports.ccblacklist.includes(user.public.color) || module.exports.ccblacklist.includes(param)) user.public.color = "jew";
+			if(module.exports.ccblacklist.includes(user.public.color) || module.exports.ccblacklist.includes(param)) user.public.color = "red";
 			
 			if(whitelist.some(ccurl => param.startsWith(ccurl + "/"))){
 				user.public.color = colors[Math.floor(Math.random() * colors.length)]; // user.public.color = param;
