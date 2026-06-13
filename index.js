@@ -286,7 +286,7 @@ setInterval(()=>{
     })
 }, 60000)
 
-let blacklist = ["nigg", "cob.soy", "camel", "fag", "kys", "kill yourself", "whatever", "kike", "oven", "bwdeltameganeil.onrender.com", "bias"];
+let blacklist = ["nigg", "cob.soy", "camel", "fag", "kys", "kill yourself", "whatever", "kike", "oven", "bwdeltameganeil.onrender.com", "bias", "you are men", "ki-ll yourself", "kill yourself", "67", "6 7"];
 function checkBlacklist(param){
     bad = false;
     blacklist.forEach((badword)=>{
